@@ -1,1 +1,1 @@
-Vue.component('jb-v-alert', require('./JbAlert.vue').default);
+Vue.component('jb-alert', require('./JbAlert.vue').default);
