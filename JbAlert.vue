@@ -23,12 +23,12 @@
         },
         data: function () {
             return {
-                exibir: this.value ? this.value.length > 0 : false
+                exibir: this.value ? Object.keys(this.value).length > 0 : false
             }
         },
         watch:{
             value(v){
-                this.exibir = v ? v.length : false
+                this.exibir = v ? Object.keys(v).length : false
             },
         },
     }

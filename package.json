@@ -1,6 +1,6 @@
 {
-  "name": "jb-v-alert",
-  "version": "1.0.0",
+  "name": "@metta/mt-v-alert",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jbmchd/jb-v-alert.git"
+    "url": "git+https://github.com/mettatecnologia/mt-v-alert.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jbmchd/jb-v-alert/issues"
+    "url": "https://github.com/mettatecnologia/mt-v-alert/issues"
   },
-  "homepage": "https://github.com/jbmchd/jb-v-alert#readme"
+  "homepage": "https://github.com/mettatecnologia/mt-v-alert#readme"
 }
