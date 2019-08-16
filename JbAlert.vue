@@ -1,8 +1,8 @@
 <template>
-    <v-alert v-model="exibir" dismissible :color="tipo" transition="scale-transition" outline class="pa-1" >
+    <v-alert v-model="exibir" dismissible :color="tipo" transition="scale-transition" outlined class="pa-2" >
         <ul class="pl-3">
-            <li v-for="(msg, key) in value" :key="key"> 
-                {{msg}} 
+            <li v-for="(msg, key) in value" :key="key">
+                {{msg}}
 
                 <v-tooltip v-if="key==0 && tooltip" bottom>
                     <template v-slot:activator="{ on }">
