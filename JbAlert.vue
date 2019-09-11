@@ -1,6 +1,9 @@
 <template>
-    <v-alert v-model="exibir" dismissible :color="tipo" transition="scale-transition" outlined class="pa-2" >
-        <ul class="pl-3">
+    <v-alert v-model="value" dismissible :color="color || 'info'" :ref="vuetify_ref" :dense="dense" :class="exibir?'':'display_none'" dark >
+        <div v-if="value_type=='string'">
+            {{value}}
+        </div>
+        <ul v-else class="pl-3">
             <li v-for="(msg, key) in value" :key="key">
                 {{msg}}
 
@@ -17,19 +20,30 @@
 
 <script>
     export default {
+        extends: window.Vue._VAlert,
         props: {
-            value:Array, tipo:String,
             tooltip:String,
         },
-        data: function () {
-            return {
-                exibir: this.value ? Object.keys(this.value).length > 0 : false
-            }
-        },
-        watch:{
-            value(v){
-                this.exibir = v ? Object.keys(v).length : false
+        computed:{
+            vuetify_ref(){
+                return this.ref || 'v-alert'
             },
+            value_type(){
+                return this.$typeof(this.value)
+            },
+            exibir(){
+                return this.$typeof(this.value,'string') || Object.keys(this.value).length > 0
+            },
+        },
+        mounted(){
+            this.$mesclarComponentesViaRef(this)
         },
     }
  </script>
+
+ <style>
+ .display_none {
+     display: none
+ }
+ </style>
+
